@@ -1,0 +1,451 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: url(images/background.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1 {
+	text-align: center;
+}
+
+.box {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: transparent;
+}
+
+.box:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .5);
+	z-index: -1;
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background: rgb(0, 0, 0, 1);
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	top: 0;
+	left: 0;
+	padding: 25px 60px;
+	box-sizing: border-box
+}
+
+#chk1 {
+	display: none;
+}
+
+header .logo {
+	flex: 1;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 10px;
+	text-shadow: 0px 0px 1px #000;
+}
+
+header ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+header ul .none {
+	display: none;
+}
+
+header ul li {
+	list-style: none;
+}
+
+header ul li a {
+	line-height: 55px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 10px 15px;
+}
+
+header ul li a:hover {
+	background: rgba(255, 0, 0, 0.8);
+	border-radius: 6px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+header ul li .dropdown {
+	display: none;
+}
+
+header ul li .dropdown li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+header ul li:hover .dropdown {
+	display: block;
+	position: absolute;
+	padding: 10px;
+}
+
+header ul li:hover .dropdown li {
+	display: block;
+}
+
+header ul li:hover .dropdown li a {
+	padding: 10px 15px;
+	border-radius: 6px;
+	margin-bottom: 5px;	
+}
+
+header ul li:hover .dropdown li a:hover {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+header .menu {
+	font-size: 1.5em;
+	display: none;
+}
+header .menu:hover .none {
+	display: block;
+	position: absolute;
+	padding: 10px;
+}
+header .menu:hover .none a {
+	padding: 10px;
+	display: block;
+}
+
+@media(max-width:1000px) {
+	header ul {
+		position: fixed;
+		top: 100px;
+		right: -100%;
+		background: rgb(0, 0, 0, 1);
+		height: calc(100vh - 100px);
+		width: 50%;
+		flex-direction: column;
+		align-items: center;
+		transition: right: 0.5s linear;
+	}
+	header .menu {
+		display: block;
+		width: 20px;
+		text-align: center;
+	}
+	#chk1:checked ~ ul {
+		right: 0;
+	}
+	.heavy img {
+		width: 80%;
+	}
+	.small img {
+		width: 80%;
+	}
+	.drink img {
+		width: 80%;
+	}
+}
+
+@media(max-width:700px) {
+	body {
+		width: 110.6%;
+	}
+	.logo {
+		font-size: 10px;
+		margin-left: 8px;
+	}
+	.navbar nav ul {
+		width: 100%;
+	}
+
+	.heavy img {
+		width: 80%;
+	}
+	.small img {
+		width: 80%;
+	}
+	.drink img {
+		width: 80%;
+	}
+	.footer {
+		width: 80%;
+	}
+	.footer p {
+    	font-size: 10px;
+	}
+	.contact {
+		width: 80%;
+	}
+	.contact-col div h4 {
+		font-size: 16px;
+	}
+	.food {
+		width: 100%;
+	}
+}
+
+.food {
+	width: 100%;
+	height: 100%;
+	color: white;
+	border-bottom: 1px solid #fff;
+}
+.food h1 {
+	text-align: center;
+	padding: 50px;
+}
+
+.heavy {
+}
+.heavy h2 {
+	padding: 20px;
+	font-size: 24px;
+}
+.heavy h3 {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+.heavy img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 1px #000;
+}
+.heavy h4 {
+	padding: 50px;
+	font-size: 20px;
+}
+
+.bhn1 {
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.bhn1 h5{
+	font-size: 16px;
+}
+.bhn1 ul {
+	padding: 20px;
+	font-size: 14px;
+}
+
+.cara1 {
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.cara1 h5 {
+	font-size: 16px;
+}
+.cara1 ul {
+	padding: 20px;
+	font-size: 14px;
+}
+
+.small {
+	box-sizing: border-box;
+	width: 100%;
+}
+.small h2 {
+	padding: 50px;
+	font-size: 24px;
+}
+.small h3 {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+.small img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 1px #000;
+}
+.small h4 {
+	padding: 50px;
+	font-size: 20px;
+}
+
+.bhn2 {
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.bhn2 h5{
+	font-size: 16px;
+}
+.bhn2 ul {
+	padding: 20px;
+	font-size: 14px;
+}
+
+.cara2 {
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.cara2 h5 {
+	font-size: 16px;
+}
+.cara2 ul {
+	padding: 20px;
+	font-size: 14px;
+	padding-bottom: 30px;
+}
+
+.drink {
+	width: 100%;
+	color: white;
+}
+.drink h1 {
+	border-top: 1px solid #fff;
+	text-align: center;
+	padding: 100px;
+}
+.drink h2 {
+	padding: 20px;
+	font-size: 24px;
+}
+.drink h3 {
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+.drink img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.drink h4 {
+	padding: 50px;
+	font-size: 20px;
+}
+
+.bhn3 {
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.bhn3 h5{
+	font-size: 16px;
+}
+.bhn3 ul {
+	padding: 20px;
+	font-size: 14px;
+}
+
+.cara3 {
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.cara3 h5 {
+	font-size: 16px;
+}
+.cara3 ul {
+	padding: 20px;
+	font-size: 14px;
+	padding-bottom: 50px;
+}
+
+.contact{
+	width: 100%;
+	margin: auto;
+}
+.contact p{
+	color: white;
+	font-size: 14px;
+}
+.contact-col{
+	flex-basis: 48%;
+	padding-bottom: 30px;
+}
+.contact-col h1 {
+	border-top: 1px solid #fff;
+	text-align: center;
+	padding: 50px;
+	color: white;
+}
+.contact-col div{
+	display: flex;
+	align-items: center;
+	padding-bottom: 40px;
+}
+.contact-col div .fa{
+	font-size: 28px;
+	color: orangered;
+	margin: 10px;
+	margin-right: 30px;
+	padding-left: 40px;
+}
+.contact-col div p{
+	padding: 0;
+}
+.contact-col div h4{
+	font-size: 20px;
+	padding-bottom: 5px;
+	color: white;
+	font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+	width: 70%;
+	margin-left: 45px;
+	padding: 15px;
+	margin-bottom: 10px;
+	outline: none;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.red-btn{
+	border: 1px solid #000;
+	background: white;
+	color: 1px solid #ccc;
+	padding: 10px;
+	margin-right: 50%;
+	margin-left: 45px;
+}
+
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+}
+.footer h1{
+	border-top: 1px solid #fff;
+	margin-bottom: 40px;
+	padding-top: 50px;
+	font-weight: 600;
+	color: white;
+}
+.footer p{
+	font-size: 16px;
+	color: white;
+}
+.icons .fa{
+	color: orangered;
+	margin: 0 13px;
+	cursor: pointer;
+	padding: 20px 0;
+}
